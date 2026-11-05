@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Jonathan M. Lewellen
+        Student ID: jonlew0997
+        Date: 11/05/2026
+        Purpose: SDC355 Project: Creating Scalable Foundations (Objects, sessionStorage, Dynamic DOM Rendering, Loops)
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional web developer portfolio showcasing scalable projects, custom objects, and session storage persistence.">
+    <title>Jonathan M. Lewellen - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Welcome!</h2>
+            <p>This page is a work in progress.</p>
+            <button type="button" id="modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <header>
+        <!-- Dark Mode Toggle -->
+        <div class="dark-mode-container">
+            <label for="dark-mode-toggle">Dark Mode</label>
+            <input type="checkbox" id="dark-mode-toggle">
+        </div>
+        
+        <h1 id="welcome-message">Jonathan M. Lewellen</h1>
+        <p>Web Developer & Software Development Student</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#featured-content">Featured Content</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am focused on building clean, structured, and interactive web applications. This portfolio represents my ongoing academic and practical progress in software development.</p>
+            
+            <h3>My Skills & Technologies</h3>
+            <ul id="skills-list">
+                <!-- Dynamically populated via JavaScript loop -->
+            </ul>
+        </section>
+
+        <!-- Projects Section (Dynamically Rendered from sessionStorage) -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <p>Explore highlights from my portfolio, dynamically rendered from structured session storage:</p>
+            <div class="projects-grid" id="projects-container">
+                <!-- Dynamically populated via script.js -->
+            </div>
+        </section>
+
+        <!-- Featured Content Section -->
+        <section id="featured-content">
+            <h2>Featured Content</h2>
+            
+            <div id="university-resources" class="resource-box">
+                <h3>University Resources</h3>
+                <p>Check out my program information:</p>
+                <ul>
+                    <li><a href="https://www.ecpi.edu" target="_blank">ECPI Program Home Page</a></li>
+                </ul>
+            </div>
+
+            <div id="personal-projects" class="resource-box">
+                <h3>Storefront Highlights</h3>
+                <p>Explore creative repository highlights:</p>
+                <div class="project-links-grid">
+                    <a href="https://github.com/JLew1234/SDC260_Storefront-Website.git" target="_blank">
+                        <img src="Images/mom_baby.png" alt="Project 1: Mother holding her baby">
+                    </a>
+                    <a href="https://github.com/JLew1234/SDC260_GlassWorks.git" target="_blank">
+                        <img src="Images/suncatcher.png" alt="Project 2 Blown Glass Suncatcher">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="#" method="POST">
+                <label for="name">Sender Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Sender Address (Email):</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <!-- Submit Button with Tooltip -->
+                <div class="tooltip-container">
+                    <button type="submit" id="submit-btn">Submit</button>
+                    <span class="tooltip-text">Click to send your message!</span>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jonathan M. Lewellen (jonlew0997). Hosted on GitHub Pages.</p>
+    </footer>
+
+    <!-- JavaScript Implementation File -->
+    <script src="projects.js" defer></script>
+</body>
+</html>

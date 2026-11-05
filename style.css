@@ -1,0 +1,303 @@
+/* =========================================
+   BASE STYLES & THEME
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1528;
+    color: #f3f4f6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background: #2e1a47;
+    color: #ff7518;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 4px solid #ff7518;
+}
+
+.dark-mode-container {
+    text-align: right;
+    padding-right: 20px;
+    font-size: 0.9rem;
+    color: #f3f4f6;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #120d1c;
+    margin: 0;
+    border-bottom: 2px solid #ff7518;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffb07c;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+    background: #ff7518;
+    color: #1a1528;
+    border-radius: 4px;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #241e38;
+    box-shadow: 0 0 15px rgba(255, 117, 24, 0.15);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   STRICT MEDIA & RESPONSIVE IMAGE STYLING
+========================================= */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-card img {
+    width: 100% !important;
+    height: 160px !important;
+    object-fit: cover !important;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.project-links-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-links-grid a img {
+    width: 110px !important;
+    height: 110px !important;
+    object-fit: cover !important;
+    border-radius: 4px;
+}
+
+/* =========================================
+   SKILLS LIST
+========================================= */
+#skills-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#skills-list li {
+    padding: 4px 0;
+    color: #ffb07c;
+    font-weight: bold;
+}
+
+/* =========================================
+   PROJECTS GRID & CARDS
+========================================= */
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.project-card {
+    border: 1px solid #4a3b6c;
+    padding: 15px;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    background: #2d2645;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    color: #ff7518;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #d1d5db;
+}
+
+/* =========================================
+   RESOURCE BOXES & FORMS
+========================================= */
+.resource-box {
+    border: 2px dashed #ff7518;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #31254a;
+    border-radius: 6px;
+}
+
+.resource-box ul {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.resource-box a {
+    color: #ffb07c;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    color: #ffb07c;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #4a3b6c;
+    border-radius: 4px;
+    background-color: #1a1528;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 15px;
+    background: #ff7518;
+    color: #1a1528;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+form button:hover {
+    background: #ff9147;
+}
+
+/* =========================================
+   MODAL & TOOLTIPS
+========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 9, 20, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #241e38;
+    color: #f3f4f6;
+    padding: 25px 30px;
+    border-radius: 8px;
+    border: 2px solid #ff7518;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+#modal-close-btn {
+    margin-top: 15px;
+    background: #ff7518;
+    color: #1a1528;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tooltip-container {
+    position: relative;
+    display: block;
+    margin-top: 15px;
+}
+
+.tooltip-container .tooltip-text {
+    visibility: hidden;
+    width: 180px;
+    background-color: #2e1a47;
+    color: #ffb07c;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 99999;
+    bottom: 115%;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border: 1px solid #ff7518;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+body.dark-mode {
+    background-color: #0c0914;
+    color: #d1d5db;
+}
+
+body.dark-mode main {
+    background: #151021;
+}
+
+body.dark-mode .project-card {
+    background: #1b1429;
+    border-color: #3b2c58;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project-card {
+        width: 90%;
+    }
+}
